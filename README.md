@@ -1,16 +1,31 @@
-# to_do_hive
 
-A new Flutter project.
+# TO - DO APPLICATION
 
-## Getting Started
+A simple and efficient to-do application built with Flutter. This app features a clean UI, robust functionality, and the integration of Hive database for seamless data storage.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ - **Login Page:** Secure and intuitive login interface.
+ - **Add New Tasks:** Add tasks with a status of completed or not completed.
+ - **Valiations:** Validations for adding tasks have been implemented using fluttter toasts
+ - **Task Status Management:** Easily update the completion status of tasks.
+ - **Slidable Delete Option:** Swipe to delete tasks with a smooth sliding animation.
+ - **Persistent Storage:** Tasks are stored locally using the Hive database for quick access and offline functionality.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Package used
+
+- Hive DB
+- Flutter slidable
+- Flutter toast
+
+
+## Screenshots
+
+![Landing Page](assets/screenshots/landing.jpeg)
+![Login Page](assets/screenshots/login.jpeg)
+![To Do Page](assets/screenshots/to-do.jpeg)
+![New Task](assets/screenshots/new-task.jpeg)
+![Toast validation](assets/screenshots/toast-validation.jpeg)
+![Slidable delete](assets/screenshots/slidable-delete.jpeg)
