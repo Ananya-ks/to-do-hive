@@ -21,7 +21,8 @@ class DialogBox extends StatefulWidget {
 }
 
 class _DialogBoxState extends State<DialogBox> {
-  String _currentStatusToPass = "Complete";
+  // by default sts is 'completed'
+  String _currentStatusToPass = "Completed";
 
   void _handlestatusChange(String newSts) {
     setState(() {
@@ -68,6 +69,11 @@ class _DialogBoxState extends State<DialogBox> {
                   ),
                 ],
               ),
+/// Initially, When MyRadioButton is called, the values are currentStatusTopass = 'Completed', onStatusChanged = reference of handleStsChange func
+/// When MyRadioButton renders, 1st ListTile in MyNewRadioButton has values of, value: 'Uncomplete', groupValue: as currentSts is 'completed' it is not equal to the value. So the radiobutton is not selected.
+/// When MyRadioButton renders, 1st ListTile in MyNewRadioButton has values of, value: 'Completed', groupValue: as currentSts is 'completed' it is equal to the value. So the radiobutton is selected.
+/// When any change in selection of radiovalue happens, onChanged property is triggered with a callback onStatusChanged with current changed value as parameter.
+/// EX: When changing from default 'Completed' to 'Uncompleted', onStatusChanged is triggered with the value 'Uncompleted' so, it is passed to handleStsChange. it sets the currentStsToPass as Uncompleted. so when widget tree rebuilts, the groupValue is updated to 'Uncompleted' 
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

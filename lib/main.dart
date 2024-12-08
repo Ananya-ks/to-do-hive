@@ -3,10 +3,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import './pages/pages.dart';
 
 void main()async{
+  /// initiate hive flutter
   await Hive.initFlutter();
-
+  /// create a box to store the datas
+  /// here 'todobox' is a key to access the box allover the application.
   var box = await Hive.openBox('todobox');
-  
+  print(box);
   runApp(const MyApp());
 }
 

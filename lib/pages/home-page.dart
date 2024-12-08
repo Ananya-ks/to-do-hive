@@ -38,7 +38,12 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.person_2_rounded), label: 'Login'),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List'),
         ],
+
+        /// naviagatePage -> refernce is passed to ontap property. Meaning 'only when user interaction happens call the_navigatePage func'.
+        /// onTap properrty always passes an index to the callbak function
         onTap: _navigatePage,
+
+        /// currentIndex -> highlights the selected current page
         currentIndex: selectedIndex,
       ),
       body: pages[selectedIndex],

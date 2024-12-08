@@ -64,6 +64,8 @@ class _ToDoMainPageState extends State<ToDoMainPage> {
 
   void createNewtask() {
     showDialog(
+      //RHS context refers to location of showDialog() call in widget tree. It ensures dialog is placed correctly
+      // and access to apprpriate ancestors and inherited widgets.
         context: context,
         builder: (context) {
           return DialogBox(
@@ -92,6 +94,9 @@ class _ToDoMainPageState extends State<ToDoMainPage> {
     return Scaffold(
       backgroundColor: Colors.deepPurple[300],
       // appBar: AppBar(title: Text('To-Do'),),
+
+
+      //listview.Builder -> takes the list and builds new widgets for those lists
       body: ListView.builder(
           itemCount: db.listToDo.length,
           itemBuilder: (context, index) {

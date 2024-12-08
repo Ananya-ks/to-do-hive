@@ -4,12 +4,14 @@ import '../pages/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
-
+  
+  /// TextEditingController -> creates a controller for editable text field. Also gives access to the text, the user types
   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    /// SingleChildScrollableView -> make a widget scroll when its content overflows out of the page.
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -89,7 +91,6 @@ class MyButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         decoration: BoxDecoration(
-          // color: Colors.blue,
           borderRadius: BorderRadius.circular(20),
         ),
         child: ElevatedButton(

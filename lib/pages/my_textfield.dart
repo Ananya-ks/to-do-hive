@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
   // const MyTextField({super.key});
-  final controller;
+  final TextEditingController controller;
   final String hintText;
   final bool obsecureText;
   final String obscuringCharacter;
@@ -28,6 +28,7 @@ class MyTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
       child: TextField(
+        controller: controller,
         onTapOutside: (event) => {_focusNode.unfocus()},
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
@@ -44,11 +45,15 @@ class MyTextField extends StatelessWidget {
               prefixIconData,
               color: prefixIconColor,
             ),
+
+            /// Text inside the textfield
             hintText: hintText,
             hintStyle: TextStyle(
               color: Colors.grey.shade700,
               fontWeight: FontWeight.bold,
             )),
+
+        /// obscureText (bool) -> characters used for hiding the text in textfiled. ex: password dot
         obscureText: obsecureText,
         obscuringCharacter: obscuringCharacter,
         style: TextStyle(
@@ -58,6 +63,3 @@ class MyTextField extends StatelessWidget {
     );
   }
 }
-
-
-
