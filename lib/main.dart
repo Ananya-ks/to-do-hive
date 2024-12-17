@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import './pages/pages.dart';
 
+// sample to-do branch
+//additional comment
 void main()async{
   /// initiate hive flutter
   await Hive.initFlutter();
